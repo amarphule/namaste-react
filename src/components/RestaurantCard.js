@@ -6,9 +6,17 @@ const RestaurantCard = ({ name, image, ingredients, price, vegetarian }) => {
     <div className="card-Container">
       <img src={image} />
       <h2 className="item-name">{name}</h2>
-      <h3 className="item-ingredients">{ingredients.join(", ")}</h3>
-      <h4 className="item-rating">${price}</h4>
-      {vegetarian ? <h5>Vegetarian</h5> : <h5>Non-Vegetarian</h5>}
+      <p className="item-ingredients">{ingredients.join(", ")}</p>
+      <div className="item-footer">
+        <div className="item-rating">$ {price}</div>
+        <div>
+          {vegetarian ? (
+            <small className="veg">Vegetarian</small>
+          ) : (
+            <small className="non-veg">Non-Vegetarian</small>
+          )}
+        </div>
+      </div>
     </div>
   );
 };
