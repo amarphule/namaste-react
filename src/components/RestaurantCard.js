@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 
-// const RestaurantCard = ({ url, name, rating, type_of_food }) => {
 const RestaurantCard = ({ name, image, ingredients, price, vegetarian }) => {
   return (
     <div className="card-Container">
