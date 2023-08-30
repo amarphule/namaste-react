@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { restaurantData } from "../constants";
 import RestaurantCard from "./RestaurantCard";
 import { searchFilter } from "../helper/searchFilter";
@@ -6,6 +6,7 @@ const initialList = restaurantData.pizza;
 const Body = () => {
   const [restaurantList, setRestaurantList] = useState(initialList);
   const [searchText, setSearchText] = useState("");
+
   const handleSearch = (text) => {
     if (text == "") {
       setRestaurantList(initialList);
