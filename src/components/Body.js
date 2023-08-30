@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { restaurantData } from "../constants";
 import RestaurantCard from "./RestaurantCard";
 import { searchFilter } from "../helper/searchFilter";
+import { Link } from "react-router-dom";
 const initialList = restaurantData.pizza;
 const Body = () => {
   const [restaurantList, setRestaurantList] = useState(initialList);
@@ -32,7 +33,9 @@ const Body = () => {
       </div>
       <div className="restautant-cards">
         {restaurantList.map((item) => (
-          <RestaurantCard {...item} key={item.id} />
+          <Link className="product-link" to={`/resto/${item.id}`} key={item.id}>
+            <RestaurantCard {...item} />
+          </Link>
         ))}
       </div>
     </>

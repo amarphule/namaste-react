@@ -27,7 +27,8 @@
   padding: 10px;
   border-radius: 5px;
 }
-.restautant-cards {
+.restautant-cards,
+.product-link {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
@@ -65,4 +66,8 @@
 .non-veg {
   color: red;
   letter-spacing: 1px;
+}
+.product-link {
+  color: black;
+  text-decoration-line: none;
 }
